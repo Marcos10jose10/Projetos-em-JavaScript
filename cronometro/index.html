@@ -4,12 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stype.css">
     <title>Meu primeiro projeto em repositorio</title>
 </head>
 <body>
-    <h1>olá mundo!</h1>
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias nostrum vero eius deserunt. A iusto debitis nulla temporibus voluptates, harum quia magnam officiis quidem in sunt totam veniam, dolorum rem!</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste et eaque iusto itaque molestiae doloremque corporis placeat ad, saepe sint quasi, officia ratione quas quaerat perferendis atque ullam corrupti odit!</p>
-    
+    <div class="container">
+       <header class="header">
+        <h1>Cronometro</h1>  
+    </header>
+    <main class="main">
+        <div class="contador">
+            <ul>
+                <li><span id="hora">00</span>
+                    <p>Horas</p></li>
+                <li><span id="minuto">00</span>
+                    <p>Minutos</p></li>
+                <li><span id="segundo">00</span>
+                    <p>Segundos</p></li>
+            </ul>
+        </div>
+        <div class="icones">
+            <button id="play" onclick="play()"><img src="icones/botao-play-ponta-de-seta (1).png" alt="" id="icones-play"></button>
+            <button id="stop" onclick="pausar()"><img src="icones/pausa (1).png" alt=""></button>
+            <button id="reset" onclick="reset()"><img src="icones/rotating-arrow-symbol.png" alt=""></button>
+
+        </div>
+    </main>
+    </div>
+    <script src="funcion.js"></script>
 </body>
 </html>
