@@ -1,6 +1,6 @@
 body{
-    background: rgb(2,0,36);
-background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(148,116,82,1) 100%, rgba(112,40,145,1) 100%, rgba(12,40,35,1) 100%);
+    
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(148,116,82,1) 100%, rgba(112,40,145,1) 100%, rgba(12,40,35,1) 100%);
     margin: 0;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
@@ -8,28 +8,31 @@ background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(148,116,82,1) 100%, r
 
 .header h1{
     font-size: 50px;
-    margin-top: 150px;
+    margin-top: 130px;
     padding: 45px;
     color: white;   
+}
+.header p{
+    position: relative;
+    color: white;
+    margin-top: -60px;
+    font-size: 30px;
 }
 
 /*para definir o fundo do cronometro*/
 .container{
-
     width: 500px;
     height: 500px;
     margin: auto;
     border-radius: 10px;
-
-    background: rgb(2,0,36);
-background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(148,116,82,1) 100%, rgba(112,40,145,1) 100%, rgba(12,40,35,1) 100%);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(148,116,82,1) 
+    100%, rgba(112,40,145,1) 100%, rgba(12,40,35,1) 100%);
 }
 
 /*para definir a possicão do icones/button e os estilos*/
 .main{
 position: absolute;
-margin-left: -535px;
-margin-top: -20px;
+margin-left: -528px;
 }
 .contador ul{
     list-style: none;
