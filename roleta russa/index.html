@@ -4,10 +4,43 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ROleta russa
-    </title>
+    <style>
+        body{
+            background: rgb(0, 174, 255);
+        }
+        .container{
+            text-align: center;
+            margin-top: 250px;
+            margin-left: 550px;
+            background: white;
+            width: 400px;
+            height: 200px;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.384);
+        }
+        .container input{
+            margin-top: 50px;
+        }
+    </style>
+    <title>ROleta russa</title>
 </head>
 <body>
-    
+    <div class="container">
+        <input type="button" value="Clikar" onclick="clikar()" >
+        <p id="res"></p>
+    </div>
+    <script>
+        function clikar(){
+            let res = document.getElementById('res')
+            let fodeu = Math.floor(Math.random() * 7)
+            if(fodeu === 6){
+                res.innerHTML = 'Morreu meu chapa'
+            }else{
+                res.innerHTML = 'Viveu eu chapa'
+            }
+            
+        }
+    </script>
 </body>
 </html>
