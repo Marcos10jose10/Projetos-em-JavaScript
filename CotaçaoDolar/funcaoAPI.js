@@ -106,7 +106,7 @@ function MudarParaDolar() {
 function MudarParaBtc() {
     document.getElementById('title').innerHTML = moedaBtc
     document.getElementById('thisdate').innerHTML = dataBtc.toLocaleString()
-    document.getElementById('maxvalue').innerHTML = toString.btcMax
+    document.getElementById('maxvalue').innerHTML = btcMax
     document.getElementById('minvalue').innerHTML = btcMin
 
 
