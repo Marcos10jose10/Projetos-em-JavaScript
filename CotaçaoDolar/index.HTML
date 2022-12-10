@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Usando a APi AwesomeAPI</title>
+</head>
+
+<body>
+
+    <h1>teste API AWESOME</h1>
+
+    <input type="button" value="USD" id="DOLAR" onclick="MudarParaDolar()">
+    <input type="button" value="EUR" id="EURO" onclick="MudarParaEuro()">
+    <input type="button" value="BTC" id="BTC" onclick="MudarParaBtc()">
+
+    <h2 id="title"></h2>
+    <p id="date">Data: <span id="thisdate"></span></p>
+    <p id="value">Valor Maximo: <span id="maxvalue"></span><br>
+        Valor Minimi: <span id="minvalue"></span>
+    </p>
+
+</body>
+<script src="funcaoAPI.js"></script>
+</body>
+
+</html>
