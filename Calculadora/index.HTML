@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <STyle>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #container {
+            background: black;
+            padding: 50px;
+            border: 5px solid rgb(252, 4, 4);
+        }
+
+        button {
+            position: static;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            background: #666;
+            color: white;
+            margin: 1px;
+
+            border: none;
+            transition: background .3 linear;
+        }
+
+        button:hover {
+            background: rgb(78, 77, 77);
+        }
+
+        p {
+            background: white;
+            text-align: right;
+            margin: 3px;
+            font-size: 32px;
+            width: 264px;
+            height: 50px;
+            padding: 7px 2px 0 0;
+
+            box-sizing: 3px 3px 10px black;
+        }
+    </STyle>
+    <title>Calculadora</title>
+</head>
+
+<body>
+    <div id="container">
+        <table>
+            <p class="res" ></p>
+            <tr>
+                <td><button class="button" onclick="insert('7')">7</button></td>
+                <td><button class="button" onclick="insert('8')">8</button></td>
+                <td><button class="button" onclick="insert('9')">9</button></td>
+                <td><button class="button" onclick="insert('+')">+</button></td>
+                <td><button class="button" onclick="Apagar('CE')">CE</button></td>
+            </tr>
+            <tr>
+                <td><button class="button" onclick="insert('4')">4</button></td>
+                <td><button class="button" onclick="insert('5')">5</button></td>
+                <td><button class="button" onclick="insert('6')">6</button></td>
+                <td><button class="button" onclick="insert('-')">-</button></td>
+                <td><button class="button" onclick="Back()">C</button></td>
+            </tr>
+            <tr>
+                <td><button class="button" onclick="insert('1')">1</button></td>
+                <td><button class="button" onclick="insert('2')">2</button></td>
+                <td><button class="button" onclick="insert('3')">3</button></td>
+                <td><button class="button" onclick="insert('*')">x</button></td>
+                <td rowspan="2"><button class="button" style="height: 103px;" onclick="Calcular()">=</button></td>
+            </tr>
+            <tr>
+                <td colspan="2"><button class="button" style="width: 103px;" onclick="insert('0')">0</button></td>
+                <td><button class="button" onclick="insert('.')">.</button></td>
+                <td><button class="button" onclick="insert('/')">/</button></td>
+            </tr>
+        </table>
+    </div>
+    <script>
+
+        let res = document.querySelector(".res")
+        function insert(num) {
+            res.innerHTML += num
+        }
+        function Apagar() {
+            res.innerHTML = "";
+        }
+        function Back() {
+            let res = document.querySelector(".res").innerHTML;
+            document.querySelector(".res").innerHTML = res.substring(0, res.length - 1);
+        }
+        function Calcular() {
+            res = document.querySelector(".res").innerHTML;
+            if (res) {
+                document.querySelector(".res").innerHTML = eval(res)
+            }
+        }
+    </script>
+</body>
+
+</html>
