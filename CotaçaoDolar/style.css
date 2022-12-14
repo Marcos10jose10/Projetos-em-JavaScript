@@ -37,32 +37,37 @@ input {
     margin: 15px;
     font-size: 25px;
     border-radius: 10%;
-    background: #FF0;
+    background: rgb(124, 160, 143);
 
 }
 
 input:hover {
-    background: green;
+    background: yellow;
 }
+
 
 h1 {
 
-    color: yellow;
+    color: rgb(162, 207, 186);
     padding: 1rem;
     text-shadow: 0.1rem 0.1rem 0.2rem black;
 }
 
 h2 {
-    color: yellow;
+    color: rgb(162, 207, 186);
     text-shadow: 0.1rem 0.1rem 0.2rem black;
 }
 
 p {
 
     margin: 2rem 1rem;
-    color: yellow;
+    color: rgb(0, 0, 0);
     text-shadow: 0.1rem 0.1rem 0.2rem black;
     font-size: 1.6rem;
+    padding: 5px;
+    border-radius: 5%;
+    border-style: solid;
+    background: yellow;
 }
 
 #maxvalue {
