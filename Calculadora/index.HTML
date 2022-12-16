@@ -20,9 +20,12 @@
 
         #container {
             background: black;
-            padding: 50px;
-            border: 5px solid rgb(252, 4, 4);
+            padding: 20px;
+            border: 5px solid rgb(233, 59, 59);
+
         }
+
+
 
         button {
             position: static;
@@ -31,27 +34,36 @@
             cursor: pointer;
             background: #666;
             color: white;
-            margin: 1px;
-
             border: none;
             transition: background .3 linear;
+            border-radius: 5px;
+            border-radius: 100%;
+            margin: 2px;
         }
 
         button:hover {
             background: rgb(78, 77, 77);
         }
 
+        td {
+
+            border-radius: 100%;
+        }
+
         p {
-            background: white;
+            color: white;
             text-align: right;
             margin: 3px;
+            margin-top: -10px;
             font-size: 32px;
-            width: 264px;
+            width: 225px;
             height: 50px;
             padding: 7px 2px 0 0;
 
             box-sizing: 3px 3px 10px black;
         }
+
+        .res2 {}
     </STyle>
     <title>Calculadora</title>
 </head>
@@ -59,52 +71,61 @@
 <body>
     <div id="container">
         <table>
-            <p class="res" ></p>
-            <tr>
-                <td><button class="button" onclick="insert('7')">7</button></td>
-                <td><button class="button" onclick="insert('8')">8</button></td>
-                <td><button class="button" onclick="insert('9')">9</button></td>
-                <td><button class="button" onclick="insert('+')">+</button></td>
-                <td><button class="button" onclick="Apagar('CE')">CE</button></td>
-            </tr>
-            <tr>
-                <td><button class="button" onclick="insert('4')">4</button></td>
-                <td><button class="button" onclick="insert('5')">5</button></td>
-                <td><button class="button" onclick="insert('6')">6</button></td>
-                <td><button class="button" onclick="insert('-')">-</button></td>
-                <td><button class="button" onclick="Back()">C</button></td>
-            </tr>
-            <tr>
-                <td><button class="button" onclick="insert('1')">1</button></td>
-                <td><button class="button" onclick="insert('2')">2</button></td>
-                <td><button class="button" onclick="insert('3')">3</button></td>
-                <td><button class="button" onclick="insert('*')">x</button></td>
-                <td rowspan="2"><button class="button" style="height: 103px;" onclick="Calcular()">=</button></td>
-            </tr>
-            <tr>
-                <td colspan="2"><button class="button" style="width: 103px;" onclick="insert('0')">0</button></td>
-                <td><button class="button" onclick="insert('.')">.</button></td>
-                <td><button class="button" onclick="insert('/')">/</button></td>
-            </tr>
+            <div class="principal">
+                <p class="res2"></p>
+                <img src="" alt="">
+                <p class="res"></p>
+                <hr>
+                <tr>
+                    <td><button class="button" style="background: rgb(255, 0, 0);" onclick="Apagar('CE')">CE</button> </td>
+                    <td><button class="button" style="background: rgb(255, 1, 1);" onclick="Back()">C</button></td>
+                    <td><button class="button" onclick="insert('**')">^</button></td>
+                    <td><button class="button" onclick="insert('/')">/</button></td>
+                </tr>
+                <tr>
+                    <td><button class="button" onclick="insert('7')">7</button></td>
+                    <td><button class="button" onclick="insert('8')">8</button></td>
+                    <td><button class="button" onclick="insert('9')">9</button></td>
+                    <td><button class="button" onclick="insert('*')">x</button></td>
+                </tr>
+                <tr>
+                    <td><button class="button" onclick="insert('4')">4</button></td>
+                    <td><button class="button" onclick="insert('5')">5</button></td>
+                    <td><button class="button" onclick="insert('6')">6</button></td>
+                    <td><button class="button" onclick="insert('-')">-</button></td>
+                </tr>
+                <tr>
+                    <td><button class="button" onclick="insert('1')">1</button></td>
+                    <td><button class="button" onclick="insert('2')">2</button></td>
+                    <td><button class="button" onclick="insert('3')">3</button></td>
+                    <td><button class="button" onclick="insert('+')">+</button></td>
+                </tr>
+                <tr>
+                    <td><button class="button" onclick="insert('0')">0</button></td>
+                    <td><button class="button" onclick="insert('.')">.</button></td>
+                    <td><button class="button" onclick="insert('*0.5')">&#8730;</button></td>
+                    <td><button class="button" style="background: green;" onclick="Calcular()">=</button></td>
+                </tr>
+            </div>
         </table>
     </div>
     <script>
-
-        let res = document.querySelector(".res")
         function insert(num) {
-            res.innerHTML += num
+            document.querySelector(".res2").innerHTML += num
         }
         function Apagar() {
-            res.innerHTML = "";
+            document.querySelector(".res").innerHTML = "";
+            document.querySelector(".res2").innerHTML = "";
         }
         function Back() {
             let res = document.querySelector(".res").innerHTML;
             document.querySelector(".res").innerHTML = res.substring(0, res.length - 1);
         }
         function Calcular() {
-            res = document.querySelector(".res").innerHTML;
+            let res = document.querySelector(".res2").innerHTML;
             if (res) {
                 document.querySelector(".res").innerHTML = eval(res)
+                document.querySelector(".res2").innerHTML = ""
             }
         }
     </script>
